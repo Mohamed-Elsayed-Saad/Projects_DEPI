@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CashierSystem
 {
-    public class Cart
+    public class  Cart
     {
         List<Product> products = new List<Product>();
         public void AddProduct(Product product)
