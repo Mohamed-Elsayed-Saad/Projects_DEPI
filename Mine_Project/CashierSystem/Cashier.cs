@@ -12,7 +12,9 @@ namespace CashierSystem
         public void AddProductToCart(Product product)
         {
             Cart.AddProduct(product);
+            
         }
+        // add products to list;
         public decimal CalculateTotal()
         {
             return Cart.CalculateTotal();
