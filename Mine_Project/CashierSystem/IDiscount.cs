@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CashierSystem
 {
+    // interface for Discount ;
     public interface IDiscount
     {
         public decimal ApplyDiscount(decimal total);
