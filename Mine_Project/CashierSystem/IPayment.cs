@@ -18,6 +18,7 @@ namespace CashierSystem
             return total;
         }
     }
+    // Class that implements Visa card payment
     public class VisaPayment : IPayment
     {
         public decimal Pay(decimal total)
@@ -25,6 +26,7 @@ namespace CashierSystem
             return total;
         }
     }
+     // Class that implements digital wallet payment
     public class WalletPayment : IPayment
     {
         public decimal Pay(decimal total)
@@ -32,6 +34,7 @@ namespace CashierSystem
             return total;
         }
     }
+      // Class that implements MasterCard payment
     public class MasterCardPayment : IPayment
     {
         public decimal Pay(decimal total)
