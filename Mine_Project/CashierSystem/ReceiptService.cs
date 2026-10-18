@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CashierSystem
 {
+    
     public class ReceiptService
     {
         public Receipt GenerateReceipt(string name, IDiscount discount, IPayment payment ,Cart cart)
