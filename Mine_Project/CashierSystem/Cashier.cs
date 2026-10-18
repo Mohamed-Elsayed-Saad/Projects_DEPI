@@ -6,28 +6,5 @@ using System.Threading.Tasks;
 
 namespace CashierSystem
 {
-    public class Cashier
-    {
-        public Cart Cart { get;  set; } = new Cart();
-        public void AddProductToCart(Product product)
-        {
-            Cart.AddProduct(product);
-            
-        }
-        // add products to list;
-        public decimal CalculateTotal()
-        {
-            return Cart.CalculateTotal();
-        }
-        
-        public decimal CalculateFinalTotal(IDiscount discount)
-        {
-            var total = Cart.CalculateTotal();
-            return discount.ApplyDiscount(total);
-        }
-        public decimal Pay(decimal total, IPayment payment)
-        {
-            return payment.Pay(total);
-        }
-    }
+   
 }
