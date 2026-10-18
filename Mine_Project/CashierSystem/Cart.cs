@@ -9,6 +9,8 @@ namespace CashierSystem
     public class  Cart
     {
         List<Product> products = new List<Product>();
+        // Calculates the total price of all products in the cart.
+
         public void AddProduct(Product product)
         {
             products.Add(product);
