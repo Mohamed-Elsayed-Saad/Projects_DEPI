@@ -6,5 +6,8 @@ namespace AidAmena.DAL.Entities
 {
     internal class AdditionalCost
     {
+         public int ID { get; set; }
+         public int Cost { get; set; }
+         public string Reason { get; set; } // سبب الشغل الزياده 
     }
 }
