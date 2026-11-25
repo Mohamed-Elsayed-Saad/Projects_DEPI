@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AidAmena.DAL.Enum
 {
-    public enum VerificationStatus
+    public enum AvailabilityStatus
     {
         Pending ,//لسه مستني المراجعة
         Approved ,//   تم التحقق والموافقة
