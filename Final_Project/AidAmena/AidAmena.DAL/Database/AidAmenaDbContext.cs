@@ -11,6 +11,13 @@ namespace AidAmena.DAL.Database
         {
             optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=Aid_Amena_Dev;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true");
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(AidAmenaDbContext).Assembly
+            );
 
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
