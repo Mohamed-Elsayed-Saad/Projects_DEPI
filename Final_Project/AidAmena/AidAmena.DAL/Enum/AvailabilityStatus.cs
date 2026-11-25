@@ -1,10 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AidAmena.DAL.Enum
 {
-    internal class AvailabilityStatus
+    public enum VerificationStatus
     {
+        Pending ,//لسه مستني المراجعة
+        Approved ,//   تم التحقق والموافقة
+        Rejected  ,//  تم رفض الحساب
+        UnderReview // تحت المراجعه 
     }
 }
