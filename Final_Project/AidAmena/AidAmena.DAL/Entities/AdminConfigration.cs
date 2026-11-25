@@ -7,6 +7,7 @@ namespace AidAmena.DAL.Entities
     public class AdminConfigration
     {
 
+
         
             public DateTime CreatedOn { get; set; } = DateTime.Now;
                    
