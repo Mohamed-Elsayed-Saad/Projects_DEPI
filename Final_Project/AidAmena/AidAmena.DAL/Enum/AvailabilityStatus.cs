@@ -6,9 +6,8 @@ namespace AidAmena.DAL.Enum
 {
     public enum AvailabilityStatus
     {
-        Pending ,//لسه مستني المراجعة
-        Approved ,//   تم التحقق والموافقة
-        Rejected  ,//  تم رفض الحساب
-        UnderReview // تحت المراجعه 
+        Available ,//  متاح لاستقبال طلبات
+        Busy ,//   مشغول حاليًا
+        Offline// غير متصل أو غير متاح
     }
 }
