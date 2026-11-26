@@ -6,16 +6,25 @@ using System.Text;
 
 namespace AidAmena.DAL.Database
 {
-    public class AidAmenaDbContext: DbContext
+    public class AidAmenaDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=Aid_Amena_Dev;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true");
         }
+
         public DbSet<AdditionalCost> AdditionalCosts { get; set; }
         public DbSet<Artisan> Artisans { get; set; }
         public DbSet<ArtisanWorkingHour> ArtisanWorkingHours { get; set; }
         public DbSet<Certificate> Certificates { get; set; }
         public DbSet<PortfolioItem> PortfolioItems { get; set; }
+
+        // Zeyad's entities
+        public DbSet<Governorate> Governorates { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Village> Villages { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
     }
 }
