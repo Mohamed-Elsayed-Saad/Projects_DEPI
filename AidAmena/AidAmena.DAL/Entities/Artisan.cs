@@ -1,8 +1,4 @@
-﻿using AidAmena.DAL.Enum;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace AidAmena.DAL.Entities
 {
     public class Artisan : AdminConfigration
@@ -25,27 +21,55 @@ namespace AidAmena.DAL.Entities
 
         public int CompletedJobs { get; set; }// عدد الطلابات الي الحرفي انهاها 
 
+
+
+
+
+
+
+
+
+
+
+
+
+        // relation
+        
+        [ForeignKey("User")]
+        public string UserId { get; set; }
+        public User User { get; set; }
+
+        
+        [ForeignKey("VerifiedBy")]
+        public int? VerifiedByAdminId { get; set; }
+        public Admin VerifiedBy { get; set; }
+
+     
+        public List<City> ServedCities { get; set; } = new();
+
+       
+        public List<SubCategory> SubCategories { get; set; } = new();
+
+       
+        public List<ServiceRequest> AssignedRequests { get; set; } = new();
+
+        
+        public List<Offer> Offers { get; set; } = new();
+
+        
+        public List<Review> Reviews { get; set; } = new();
+
+       
+        public List<Certificate> Certificates { get; set; } = new();
+
         
 
-
-
-
-
-
-
-
-
-
-
-            // relation
-         
-            public List<PortfolioItem>? PortfolioItems{ get; set; } 
-            public List<ArtisanWorkingHour>? ArtisanWorkingHours{ get; set; } 
-            public List<Certificate>? Certificates{ get; set; } 
-        
-
-
-
+        public List<PortfolioItem> PortfolioItems { get; set; } = new();
+        public List<ArtisanWorkingHour> ArtisanWorkingHours { get; set; } = new();
 
     }
+
+    
+
 }
+
