@@ -12,7 +12,12 @@ namespace AidAmena.DAL.Database
         {
             optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=Aid_Amena_Dev;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true");
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AidAmenaDbContext).Assembly);
+        }
         public DbSet<AdditionalCost> AdditionalCosts { get; set; }
         public DbSet<Artisan> Artisans { get; set; }
         public DbSet<ArtisanWorkingHour> ArtisanWorkingHours { get; set; }
@@ -26,5 +31,7 @@ namespace AidAmena.DAL.Database
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<ServiceRequest> ServiceRequests { get; set; }
+        public DbSet<Offer> Offers { get; set; }
     }
 }
