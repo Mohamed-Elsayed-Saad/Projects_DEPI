@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-
+﻿
 namespace AidAmena.DAL.Entities
 {
     public class Certificate
@@ -16,6 +11,9 @@ namespace AidAmena.DAL.Entities
         public string FileUrl {  get; set; }
 
         // relation
+
+
+
 
         public string? ArtisanId { get; set; }
 

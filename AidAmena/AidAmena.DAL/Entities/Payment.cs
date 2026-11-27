@@ -1,5 +1,5 @@
 
-using System.ComponentModel.DataAnnotations;
+
 namespace AidAmena.DAL.Entities
 {
     public class Payment
